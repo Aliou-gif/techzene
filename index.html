@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechZen - Votre Portail d'Apprentissage Informatique Tech</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Lier css avec html -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2L1 7v10l11 5 11-5V7L12 2zm0 2.54l7.27 3.28L12 11.46 4.73 7.82 12 4.54zM3 16.05V8.82l8 3.64v7.23l-8-3.64zm10 3.64V12.46l8-3.64v7.23l-8 3.64z"/>
+            </svg>
+            <span>Tech</span>Zen
+          </a>
+          <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+          <nav>
+            <ul>
+              <li><a href="#accueil">Accueil</a></li>
+              <li><a href="#cours">Cours</a></li>
+              <li><a href="#parcours">Parcours</a></li>
+              <li><a href="#forum">Forum</a></li>
+              <li><a href="#boutique">Boutique</a></li>
+              <li><a href="#profil">Profil</a></li>
+              <li><a href="mailto:alioulaouali@gmail.com">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- section hero -->
+      <section id="hero" class="section">
+        <div class="gauche">
+          <h1>Bienvenue sur TechZen</h1>
+          
+          <p>
+            Découvrez une nouvelle façon d'apprendre l'informatique avec nos cours en ligne interactifs, 
+            nos parcours personnalisés et notre boutique de produits tech. 
+            Que vous soyez débutant ou expert, 
+            TechZen vous accompagne dans votre évolution professionnelle et personnelle.
+          </p>
+          <button class="btn">Apprendre plus</button>
+        </div>
+        <div class="droite">
+          <img src="images/bg.png" />
+          <div class="effets">
+            <div class="cercle"></div>
+            <div class="cercle"></div>
+            <div class="cercle"></div>
+          </div>
+        </div>
+      </section>
+
+<!-- Section services -->
+      <section id="cours" class="section">
+        <h2>Nos services</h2>
+        <div class="course-grid">
+          
+          <div class="course-card">
+            
+            <div class="icon">🖥️</div>
+              <h3>Cours en ligne</h3>
+              <p>Accédez à nos cours interactifs couvrant divers sujets technologiques.</p>
+            
+          </div>
+          <div class="course-card">
+            
+            <div class="icon">🎓</div>
+            <h3>Parcours personnalisés</h3>
+            <p>Suivez des parcours d'apprentissage adaptés à vos objectifs et votre niveau.</p>
+            </div>
+          <div class="course-card">
+            
+            <div class="icon">💬</div>
+            <h3>Forum communautaire</h3>
+            <p>Échangez avec d'autres apprenants et nos experts sur notre forum dédié.</p>
+          </div>
+          <div class="course-card">
+            <div class="icon">🛒</div>
+            <h3>Boutique tech</h3>
+            <p>Découvrez notre sélection de produits tech pour optimiser votre apprentissage.</p>
+        </div>
+           
+      </section>
+
+      
+      
+
+      <!-- Section sur l'album -->
+      <section id="album" class="section">
+        <h2>Album</h2>
+
+        <div class="photo">
+          <img src="images/03.jpg" />
+          <img src="images/04.jpg" />
+          <img src="images/05.jpg" />
+          <img src="images/06.jpg" />
+        </div>
+      </section>
+
+      <!-- Section contact -->
+      <section >
+        <div class="partie1">
+          <h2>Qui sommes-nous ?</h2>
+          
+            <p>
+              <b>TechZenb</b> est une combinaison des mots <b>Tech</b> (Technologie) et <b>Zen</b>(qui fait reference à la serénité et la paix interieure!)
+              Le nom suggere une entreprise qui apporte des solutions technologiques de maniere simple, elegante et efficace, en gardant une approche calme et maitrisée.
+              Il évoque l'idée de rendre la technologie accessible et facile à utiliser; tout en maintenant une qualité et une tranquilité d'esprit pour les clients. 
+            </p>
+        
+        </div>
+        <div class="partie2">
+          <h2>Contactez-nous</h2>
+          <form action="">
+            <input type="text" placeholder="votre nom" />
+            <input type="email" placeholder="votre adresse mail" />
+            <textarea name="message" placeholder="votre message"></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+      <!-- Footer -->
+      <footer >
+        <div class="container">
+          <p>&copy; 2024 TechZen. Tous droits réservés.</p>
+        </div>
+      </footer>
+      
+        <div class="reseaux">
+          <div class="carte">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="carte">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="carte">
+            <i class="fab fa-instagram"></i>
+          </div>
+        </div>
+      
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Menu toggle pour mobile
+      $('.menu-toggle').click(function() {
+        $('nav').toggleClass('active');
+      });
+      
+      // Effet de défilement fluide pour les liens de navigation
+      $('nav a').on('click', function(e) {
+        e.preventDefault();
+        $('nav').removeClass('active');
+        $('html, body').animate({
+          scrollTop: $($(this).attr('href')).offset().top - 100
+        }, 800);
+      });
+      
+      // Animation des sections au défilement
+      function animateSections() {
+        $('.section').each(function() {
+          if ($(window).scrollTop() + $(window).height() > $(this).offset().top + 100) {
+            $(this).addClass('fade-in');
+          }
+        });
+      }
+      
+      $(window).on('scroll', animateSections);
+      animateSections(); // Appel initial pour animer les sections visibles au chargement
+     
+      // Animation du logo au survol
+     $('.logo').on('mouseover', function() {
+        $(this).addClass('pulse');
+      }).on('animationend', function() {
+        $(this).removeClass('pulse');
+      });
+     
+    });
+
+     
+     </script>
+  </body>
+</html>
