@@ -1,0 +1,263 @@
+<html><head><base href="https://techzen.com/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZen - Boutique en ligne</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+        #cart-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+        #cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+        #cart-total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #checkout-button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+        }
+        #payment-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+        #receipt {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 30px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TechZen - Boutique en ligne</h1>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://cdn.lesnumeriques.com/optim/guide-auto/14/141611/b3a226bb-quels-sont-les-meilleurs-ordinateurs-pc-portables__1200_1200__664-173-4398-3907.jpeg" alt="Sac à dos et sac fourre-tout TechZen" class="product-image">
+                <div class="product-title">Ensemble Sacs TechZen</div>
+                <div class="product-price">49.99 €</div>
+                <button class="buy-button" onclick="addToCart('Ensemble Sacs TechZen', 49.99)">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5VymdxQXJS0kRLhqHiKEb3ICyDNGE-PQhxpHJRlPq4Q2zP-sBUCjFOsTH9Nz185CpS4&usqp=CAU" alt="Ordinateur portable avec sticker TechZen" class="product-image">
+                <div class="product-title">Sticker Ordinateur TechZen</div>
+                <div class="product-price">9.99 €</div>
+                <button class="buy-button" onclick="addToCart('Sticker Ordinateur TechZen', 9.99)">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVX3VCtTysZSrwnaFka81t_rOe6MGlKPbNCg&s" alt="T-shirts TechZen blanc et noir" class="product-image">
+                <div class="product-title">T-shirt TechZen</div>
+                <div class="product-price">24.99 €</div>
+                <button class="buy-button" onclick="addToCart('T-shirt TechZen', 24.99)">Ajouter au panier</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSQ5FaxwR2XDtSNhrhhfoVEMZWZTMPQ4x-rw&s" alt="Bouteille d'eau et mug TechZen" class="product-image">
+                <div class="product-title">Ensemble Bouteille et Mug TechZen</div>
+                <div class="product-price">34.99 €</div>
+                <button class="buy-button" onclick="addToCart('Ensemble Bouteille et Mug TechZen', 34.99)">Ajouter au panier</button>
+            </div>
+        </div>
+
+        <div id="cart-container">
+            <h2>Votre Panier</h2>
+            <ul id="cart-items"></ul>
+            <div id="cart-total">Total: 0.00 €</div>
+            <button id="checkout-button" class="buy-button" onclick="checkout()">Passer à la caisse</button>
+        </div>
+
+        <div id="payment-modal">
+            <div class="modal-content">
+                <h2>Choisissez votre mode de paiement</h2>
+                <select id="payment-method">
+                    <option value="card">Carte bancaire</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bitcoin">Bitcoin</option>
+                </select>
+                <button onclick="processPayment()">Payer</button>
+            </div>
+        </div>
+
+        <div id="receipt">
+            <h2>Reçu</h2>
+            <div id="receipt-content"></div>
+            <button onclick="printReceipt()">Imprimer le reçu</button>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function addToCart(productName, price) {
+            cart.push({name: productName, price: price});
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price.toFixed(2)} €`;
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Supprimer';
+                removeButton.onclick = () => removeFromCart(index);
+                li.appendChild(removeButton);
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+
+            cartTotal.textContent = `Total: ${total.toFixed(2)} €`;
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+
+            document.getElementById('payment-modal').style.display = 'block';
+        }
+
+        function processPayment() {
+            const paymentMethod = document.getElementById('payment-method').value;
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+            // Simulation d'un paiement
+            setTimeout(() => {
+                alert(`Paiement de ${total.toFixed(2)} € traité avec succès via ${paymentMethod} !`);
+                document.getElementById('payment-modal').style.display = 'none';
+                generateReceipt(total, paymentMethod);
+                cart = [];
+                updateCart();
+            }, 1000);
+        }
+
+        function generateReceipt(total, paymentMethod) {
+            const receipt = document.getElementById('receipt');
+            const receiptContent = document.getElementById('receipt-content');
+            const date = new Date().toLocaleString();
+
+            let receiptHtml = `
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Mode de paiement:</strong> ${paymentMethod}</p>
+                <ul>
+            `;
+            cart.forEach(item => {
+                receiptHtml += `<li>${item.name} - ${item.price.toFixed(2)} €</li>`;
+            });
+            receiptHtml += `
+                </ul>
+                <p><strong>Total:</strong> ${total.toFixed(2)} €</p>
+                <p>Merci pour votre achat !</p>
+            `;
+
+            receiptContent.innerHTML = receiptHtml;
+            receipt.style.display = 'block';
+        }
+
+        function printReceipt() {
+            const receiptContent = document.getElementById('receipt-content').innerHTML;
+            const printWindow = window.open('', '', 'height=600,width=800');
+            printWindow.document.write('<html><head><title>Reçu TechZen</title>');
+            printWindow.document.write('</head><body>');
+            printWindow.document.write(receiptContent);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>
