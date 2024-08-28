@@ -31,13 +31,12 @@
           <nav>
             <ul>
               <li><a href="#accueil">Accueil</a></li>
-              <li><a href="#cours">Cours</a></li>
-              <li><a href="#parcours">Parcours</a></li>
+              <li><a href="#cours">Services</a></li>
               <li><a href="#forum">Forum</a></li>
-              <li><a href="#boutique">Boutique</a></li>
-              <li><a href="#profil">Profil</a></li>
-              <li><a href="mailto:alioulaouali@gmail.com">Contact</a></li>
+              <li><a href="#album">Boutique</a></li>
+              
             </ul>
+            <a href="mailto:alioulaouali@gmail.com" class="btn">Contact</a>
           </nav>
         </div>
       </div>
@@ -55,6 +54,7 @@
             Que vous soyez débutant ou expert, 
             TechZen vous accompagne dans votre évolution professionnelle et personnelle.
           </p>
+          
           <button class="btn">Apprendre plus</button>
         </div>
         <div class="droite">
@@ -68,75 +68,79 @@
       </section>
 
 <!-- Section services -->
-      <section id="cours" class="section">
-        <h2>Nos services</h2>
-        <div class="course-grid">
+
+        <section id="cours" class="section">
+          <h2>Nos Services</h2>
           
-          <div class="course-card">
+          <div class="course-grid" id="services-grid" class="services-grid" >
             
-            <div class="icon">🖥️</div>
-              <h3>Cours en ligne</h3>
-              <p>Accédez à nos cours interactifs couvrant divers sujets technologiques.</p>
-            
-          </div>
-          <div class="course-card">
-            
-            <div class="icon">🎓</div>
-            <h3>Parcours personnalisés</h3>
-            <p>Suivez des parcours d'apprentissage adaptés à vos objectifs et votre niveau.</p>
-            </div>
-          <div class="course-card">
-            
-            <div class="icon">💬</div>
-            <h3>Forum communautaire</h3>
-            <p>Échangez avec d'autres apprenants et nos experts sur notre forum dédié.</p>
-          </div>
-          <div class="course-card">
-            <div class="icon">🛒</div>
-            <h3>Boutique tech</h3>
-            <p>Découvrez notre sélection de produits tech pour optimiser votre apprentissage.</p>
+                <!-- Les cartes de services seront générées dynamiquement ici -->
+
         </div>
-           
-      </section>
+        </section>
 
       
       
 
       <!-- Section sur l'album -->
       <section id="album" class="section">
-        <h2>Album</h2>
-
-        <div class="photo">
-          <img src="images/03.jpg" />
-          <img src="images/04.jpg" />
-          <img src="images/05.jpg" />
-          <img src="images/06.jpg" />
-        </div>
+        <h2>Boutique</h2>
+        <div class="product-grid"  >
+          <div class="product-card">
+              <img src="images/03.jpg" alt="Sac à dos et sac fourre-tout TechZen" class="product-image">
+              <div class="product-title">Ensemble Sacs TechZen</div>
+              <div class="product-price">0.0 CFA</div>
+              <button class="btn" onclick="addToCart('Ensemble Sacs TechZen', 0.0)" ><a href="Boutique.html">Ajouter au panier</a></button>
+          </div>
+          <div class="product-card">
+              <img src="images/04.jpg" alt="Ordinateur portable avec sticker TechZen" class="product-image">
+              <div class="product-title">Sticker Ordinateur TechZen</div>
+              <div class="product-price">0.0CFA</div>
+              <button class="btn" onclick="addToCart('Sticker Ordinateur TechZen', 0.0)"><a href="Boutique.html">Ajouter au panier</a></button>
+          </div>
+          <div class="product-card">
+              <img src="images/05.jpg" alt="T-shirts TechZen blanc et noir" class="product-image">
+              <div class="product-title">T-shirt TechZen</div>
+              <div class="product-price">0.0 CFA</div>
+              <button class="btn" onclick="addToCart('T-shirt TechZen', O.O)"><a href="Boutique.html">Ajouter au panier</a></button>
+          </div>
+          <div class="product-card">
+              <img src="images/06.jpg" alt="Bouteille d'eau et mug TechZen" class="product-image">
+              <div class="product-title">Ensemble Bouteille et Mug TechZen</div>
+              <div class="product-price">0.0 CFA</div>
+              <button class="btn" onclick="addToCart('Ensemble Bouteille et Mug TechZen', 0.0)"><a href="Boutique.html">Ajouter au panier</a></button>
+          </div>
+      </div>
+       
       </section>
 
       <!-- Section contact -->
-      <section >
+      <section class="section">
         <div class="partie1">
           <h2>Qui sommes-nous ?</h2>
           
             <p>
-              <b>TechZenb</b> est une combinaison des mots <b>Tech</b> (Technologie) et <b>Zen</b>(qui fait reference à la serénité et la paix interieure!)
+              <b>TechZen</b> est une combinaison des mots <b>Tech</b> (Technologie) et <b>Zen</b>(qui fait reference à la serénité et la paix interieure!)
               Le nom suggere une entreprise qui apporte des solutions technologiques de maniere simple, elegante et efficace, en gardant une approche calme et maitrisée.
               Il évoque l'idée de rendre la technologie accessible et facile à utiliser; tout en maintenant une qualité et une tranquilité d'esprit pour les clients. 
             </p>
-        
+
         </div>
-        <div class="partie2">
-          <h2>Contactez-nous</h2>
-          <form action="">
-            <input type="text" placeholder="votre nom" />
-            <input type="email" placeholder="votre adresse mail" />
-            <textarea name="message" placeholder="votre message"></textarea>
-            <button type="submit" class="btn">Envoyer</button>
-          </form>
+        <div class="partie2" >
+          <h2>Nos coordonnées</h2>
+            <p><i class="fas fa-map-marker-alt"></i> Recasement 1<sup>ere</sup> Latterite,  Niamey, Niger</p>
+            <p><i class="fas fa-phone"></i> +227 99 33 88 14</p>
+            <p><i class="fas fa-envelope"></i> alioulaouali@gmail.com</p>
+            
+            <h3>Horaires d'ouverture</h3>
+            <p>Lundi - Vendredi : 8h00 - 18h00</p>
+            <p>Samedi : 10h00 - 14h00</p>
+            <p>Dimanche : Fermé</p>
         </div>
       </section>
+      
     </main>
+
 
       <!-- Footer -->
       <footer >
@@ -146,14 +150,37 @@
       </footer>
       
         <div class="reseaux">
+          
           <div class="carte">
-            <i class="fab fa-facebook-f"></i>
+           <a href="https://www.facebook.com/TechZen" target="_blank"> <i class="fab fa-facebook-f"></i></a>
           </div>
           <div class="carte">
-            <i class="fab fa-twitter"></i>
+            <a href="https://www.twitter.com/TechZen" target="_blank"><i class="fab fa-twitter"></i></a>
           </div>
           <div class="carte">
-            <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/TechZen" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="carte">
+            <a href="https://www.linkedin.com/TechZen" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div class="carte">
+            <a href="https://www.whatapp.com/TechZen" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+<!-- Modal de demande de service -->
+        <div id="service-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Demande de service</h2>
+            <form id="demande-service-form">
+              <input type="hidden" id="service-id" name="service-id">
+              <input type="text" name="nom" placeholder="Nom" required>
+              <input type="text" name="prenom" placeholder="Prénom" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="tel" name="telephone" placeholder="Téléphone" required>
+              <textarea name="description" placeholder="Décrivez votre besoin" required></textarea>
+              <button type="submit">Envoyer la demande</button>
+            </form>
           </div>
         </div>
       
@@ -195,8 +222,149 @@
       });
      
     });
+//pour le demande de services
+const services = [
+      {
+        id: 1,
+        titre: "Cours en ligne",
+        description: "Sessions de formation adaptées à vos besoins pour maîtriser les outils informatiques.",
+        icon: "fa-solid fa-laptop-code",
+        lien :"cours.html"
+      },
+      {
+        id: 2,
+        titre: "Installation et configuration de réseaux",
+        description: "Mise en place et optimisation de votre infrastructure réseau pour une connectivité optimale.",
+        icon: "fa-solid fa-network-wired"
+      },
+      {
+        id: 3,
+        titre: "Sécurisation des systèmes",
+        description: "Protection de vos données et systèmes contre les menaces informatiques.",
+        icon: "fa-solid fa-shield-halved"
+      },
+      {
+        id: 4,
+        titre: "Développement sur mesure",
+        description: "Création d'applications et de sites web adaptés à vos besoins spécifiques.",
+        icon: "fa-solid fa-code"
+      },
+      {
+        id: 5,
+        titre: "Maintenance préventive",
+        description: "Entretien régulier de vos équipements pour prévenir les pannes et optimiser les performances.",
+        icon: "fa-solid fa-screwdriver-wrench"
+      },
+      {
+        id: 6,
+        titre: "Formation personnalisée",
+        description: "Sessions de formation adaptées à vos besoins pour maîtriser les outils informatiques.",
+        icon: "fa-solid fa-chalkboard-user"
+      },
+      {
+        id: 1,
+        titre: "Dépannage informatique",
+        description: "Résolution rapide de vos problèmes informatiques, que ce soit sur site ou à distance.",
+        icon: "fa-solid fa-wrench"
+      },
+      {
+        id: 8,
+        titre: "Encadrements",
+        description: "Pour tout besoin en encadrement de Memoire ou BTS en Informatique.",
+        icon: "fa-duotone fa-solid fa-graduation-cap",
+        
+      },
 
-     
+    ];
+
+    function afficherServices() {
+      const grid = document.getElementById("services-grid");
+      services.forEach(service => {
+        const card = document.createElement("div");
+        card.className = "service-card";
+        card.innerHTML = `
+   
+          <div class="course-card">
+              <div  class="icon">
+                <i class="${service.icon}"></i><a href="${service.lien}"> Voir</a>
+              </div>
+                  <h3>${service.titre}</h3>
+                  <p>${service.description}</p>
+                  <a href="#" class="btn demande-service-btn" data-id="${service.id}" >Demander ce service</a>
+          </div>
+      
+        
+        `;
+        grid.appendChild(card);
+      });
+
+      // Ajouter les écouteurs d'événements pour les boutons de demande de service
+      document.querySelectorAll('.demande-service-btn').forEach(btn => {
+        btn.addEventListener('click', ouvrirModalService);
+      });
+    }
+
+    // Afficher tous les services au chargement de la page
+    afficherServices();
+
+    // Modal de demande de service
+    const modal = document.getElementById("service-modal");
+    const span = document.getElementsByClassName("close")[0];
+
+    function ouvrirModalService(e) {
+      e.preventDefault();
+      const serviceId = e.target.getAttribute('data-id');
+      document.getElementById('service-id').value = serviceId;
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    // Gestion du formulaire de demande de service
+    const form = document.getElementById("demande-service-form");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
+      // Simuler l'envoi des données au serveur
+      console.log("Données de demande de service:", data);
+
+      // Générer un numéro de ticket (simulation)
+      const ticket = {
+        numero: Math.floor(Math.random() * 1000000),
+        date: new Date().toISOString(),
+        client: `${data.prenom} ${data.nom}`,
+        email: data.email,
+        service: services.find(s => s.id === parseInt(data.service_id)).titre,
+        statut: "Ouvert"
+      };
+
+      console.log("Ticket de demande de service créé:", ticket);
+
+      // Simuler la gestion administrative
+      const demandeService = {
+        id: Math.floor(Math.random() * 10000),
+        ...data,
+        dateDemande: new Date().toISOString(),
+        statut: "En attente de traitement"
+      };
+
+      console.log("Demande de service enregistrée:", demandeService);
+
+      // Fermer le modal et afficher un message de confirmation
+      modal.style.display = "none";
+      alert(`Votre demande de service a été enregistrée avec succès ! Numéro de ticket : ${ticket.numero}`);
+    });
      </script>
   </body>
 </html>
